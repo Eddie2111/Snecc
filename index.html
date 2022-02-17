@@ -2,9 +2,12 @@
 <html lang="en">
   <head>
     <title>The snake game reborn</title>
+
+<p>Press navigation buttons to start the game!</p>
+
     <script type="module">
       document.body.innerHTML = `<canvas id="canvas"
-        width="256" height="256" style="background: black;">`;
+        width="256" height="256" style="background: black;margin:auto;padding:auto;">`;
       let ctx   = canvas.getContext("2d");
       let snake = [[8,8]], apple = [4,4], [dx,dy] = [0,0];
       onkeydown = ({key}) => [dx,dy] =
@@ -28,6 +31,7 @@
         snake.forEach(([x,y]) => ctx.fillRect(x*16, y*16, 16, 16));
       }, 112);
     </script>
+<canvas id='canvas'> </canvas>
   </head>
   <body>
     <h2>Press navigation button to start..!</h2>
